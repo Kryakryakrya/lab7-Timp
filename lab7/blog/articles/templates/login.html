@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{{ STATIC_URL }}/static/article.css">
+<title>Django Public Blog - вход</title>
+</head>
+<body>
+<div class="content">
+<h1>Заходи давай, а то шо как не родной?</h1>
+<form method="POST">{% csrf_token %}
+<input type="text" name="username" placeholder="Ваш логин?" value="{{ form.username }}"><br>
+    <input type="text" name="password" placeholder="Ваш пароль?" value="{{ form.password }}"><br>
+<input type="submit" value="Сохранить">
+</form>
+{{ form.errors }}
+</div>
+</body>
+</html>

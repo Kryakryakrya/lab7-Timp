@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{{ STATIC_URL }}/static/article.css">
+    <meta charset="utf-8">
+    <title>Статья {{post.id}}</title>
+</head>
+<body>
+<div class="header">
+</div>
+<div class="archive">
+<div class="one-post">
+<h2 class="post-title"> <a href="http://127.0.0.1:8000/article/{{post.article_id}}">{{ post.title }}</a></h2>
+<div class="article-info">
+<div class="article-author">{{ post.author.username }}</div>
+<div class="article-created- date">{{ post.created_date }}</div>
+</div>
+<p class="article-text">{{ post.get_excerpt }}</p>
+<p class="id">{{ post.id }}</p>
+</div>
+<a href="http://127.0.0.1:8000/"><h2 class="post-title">Все записи</h2></a>
+</div>
+</body>
+</html>
